@@ -134,7 +134,7 @@ object Ch2Options {
    * existing value or extract a value from non-empty Option
    * */
 
-  /** .filter */
+  /** .filter: create new Option from existing Option by applying predicate to its value */
   val example12 = Option(1 -> 2)
   val value12a = example12
     .filter(item => item._2 > 10) /** if `item._2 > 0` is true,
@@ -144,7 +144,7 @@ object Ch2Options {
                                   * .filter will always return None
                                   */
 
-  /** .foldLeft */
+  /** .foldLeft: transform an Option into another value by applying its value into an accumulator */
   val example13 = Option(List("a", "b", "c"))
   val value13 = example13.foldLeft("") { (memo, value) =>
     memo + " " + value.mkString(" ")
@@ -156,5 +156,15 @@ object Ch2Options {
     *   .foldLeft[B](initialValue: B)(accumulator: (B, A) => B)
     * */
 
+  /** .isEmpty: check if an Option is.. empty */
+  val example14 = Option.empty[Int]
+  val value14 = example14.isEmpty
 
+  /** .nonEmpty: check if an Option is.. not empty */
+  val example15 = Option.empty[Int]
+  val value15 = example15.nonEmpty
+
+  /** .isDefined: alias of .nonEmpty */
+  val example16 = Some(20)
+  val value16 = example16.isDefined
 }
