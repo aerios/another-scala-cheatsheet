@@ -10,7 +10,12 @@ object Ch3Tries {
    * always return a value or output. Exception thrown in a function will make that function
    * not total or loosely translated as `partial`. The benefit of total function is that
    * every function will behave exactly as its signature, and in return it will make our program
-   * easier to reason and will be more likely to be correct when the program typecheck.
+   * easier to reason and will be more likely to be correct when the program typecheck (1).
+   *
    */
 
+
+  /**
+   * (1): https://adamdrake.com/are-your-functions-total.html
+   * */
 }
