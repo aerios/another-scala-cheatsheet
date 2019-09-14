@@ -1,0 +1,5 @@
+package intermediate
+
+object Futures {
+
+}
