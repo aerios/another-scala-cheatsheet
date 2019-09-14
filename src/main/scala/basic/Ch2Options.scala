@@ -10,7 +10,7 @@ object Ch2Options {
    *
    * Option is an abstract class that has 2 concrete classes
    * each to represent not-null and null condition
-   * Some is subtype of Option that enable us to indicate not-null
+   * Some[A](value: A) is subtype of Option that enable us to indicate not-null
    * None is subtype of Option that enable us to indicate null
    * To be precise, Some is a container of value, and None is container of nothing
    * */
